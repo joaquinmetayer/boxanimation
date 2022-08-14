@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+	<title>FRBox</title>
+	<link href="./frbox.png" rel="icon">
+	<link rel="stylesheet" href="./stylesheet.css">
+</head>
+<body>
+	<main>
+		<div class="tree_d_box_in">
+			<span class="in_box">
+				<h3>see focus here</h3>
+			</span>
+			<span class="in_box"></span>
+			<span class="in_box"></span>
+			<span class="in_box"></span>
+			<span class="in_box"></span>
+			<span class="in_box"></span>
+			</div>
+		<div>
+            <a id="playAudio">1 - TOUCH HERE TO PLAY MUSIC</a>
+			<p>2 - SEE THE BOX FOCUSED</p>
+			<p>3 - RELAX AND EJOY</p>
+		</div>
+	</main>
+<audio id="testAudio" hidden src="./frbox.mp3" type="audio/mpeg">
+</audio>
+	<footer>
+		<p>by <a href="https://www.joaquinmetayer.com" target="_blank">Joaquin Metayer</a></p>
+	</footer>
+</body>
+<script type="text/javascript">
+	document.getElementById("playAudio").addEventListener("click", function(){
+		var audio = document.getElementById('testAudio');
+	  if(this.className == 'is-playing'){
+		this.className = "";
+		this.innerHTML = "1 - TOUCH HERE TO PLAY MUSIC"
+		audio.pause();
+	  }else{
+		this.className = "is-playing";
+		this.innerHTML = "1 - TOUCH HERE TO STOP MUSIC";
+		audio.play();
+	  }
+	});
+</script>
+</html>
+
+
+
+
